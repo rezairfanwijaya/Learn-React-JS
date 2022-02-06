@@ -79,10 +79,19 @@
             children: [judul, desc]
         })
 
+        // misal ada kasus dimana judul dan deskipsi tidak boleh dibungkus oleh element apapun. Itu kita bisa memakai pragemnt 
+        const pragment = React.createElement(React.Fragment, {
+            // children disini type nya array
+            children: [judul, desc]
+        })
+
+
+
 
         // lalu lakukan rendring ke const root diatas (parent)
         ReactDOM.render(textKedua, root)
         ReactDOM.render(div, root)
+        ReactDOM.render(pragment, root)
     </script>
 </body>
 
