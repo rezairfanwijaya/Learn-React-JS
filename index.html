@@ -12,9 +12,6 @@
     <!-- <div>ini dari html</div> -->
     <div id="root"></div>
 
-
-
-
     <!-- import CDN React JS -->
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -24,7 +21,7 @@
 
 
 
-    <script>
+    <script type="text/babel">
         // ambil element dengan id root yang akan digunakan sebagai parent
         const root = document.querySelector('#root')
 
@@ -110,7 +107,19 @@
 
 
         // ========== MEMBUAT ELEMENT DENGAN JSX agar lebih mudah ===========
-        const list = ()
+        const listAngka = (
+            <ul>
+                <li>
+                    Saya Angka Pertama
+                </li>
+                <li>
+                    Saya Angka Kedua
+                </li>
+                <li>
+                    Saya Angka Ketiga
+                </li>
+            </ul>
+        )
 
 
         // lalu lakukan rendring ke const root diatas (parent)
@@ -118,6 +127,7 @@
         ReactDOM.render(div, root)
         ReactDOM.render(pragment, root)
         ReactDOM.render(ul, root)
+        ReactDOM.render(listAngka, root)
     </script>
 </body>
 
