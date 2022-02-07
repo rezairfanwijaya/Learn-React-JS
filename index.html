@@ -125,6 +125,14 @@
         // embed varibel
         const reza = 'Reza'
         const nama = <h2>Hallo Saya {reza}</h2>
+
+        // embed function
+        function persegi (p,l){
+            let luas = p*l
+            return luas
+        }
+
+        const luasPersegi = <h3>Luas Persegi adalah {persegi(4,5)}</h3>
         
 
 
@@ -135,6 +143,7 @@
         ReactDOM.render(ul, root)
         ReactDOM.render(listAngka, root)
         ReactDOM.render(nama, root)
+        ReactDOM.render(luasPersegi, root)
     </script>
 </body>
 
