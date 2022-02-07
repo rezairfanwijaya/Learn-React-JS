@@ -121,6 +121,12 @@
             </ul>
         )
 
+        // embed javascript expression kedalam JSX
+        // embed varibel
+        const reza = 'Reza'
+        const nama = <h2>Hallo Saya {reza}</h2>
+        
+
 
         // lalu lakukan rendring ke const root diatas (parent)
         ReactDOM.render(textKedua, root)
@@ -128,6 +134,7 @@
         ReactDOM.render(pragment, root)
         ReactDOM.render(ul, root)
         ReactDOM.render(listAngka, root)
+        ReactDOM.render(nama, root)
     </script>
 </body>
 
