@@ -13,6 +13,7 @@
 <body>
     <!-- <div>ini dari html</div> -->
     <div id="root"></div>
+    <div id="second"></div>
 
     <!-- import CDN React JS -->
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
@@ -26,6 +27,7 @@
     <script type="text/babel">
         // ambil element dengan id root yang akan digunakan sebagai parent
         const root = document.querySelector('#root')
+        const second = document.querySelector('#second')
 
         // ========== MEMBUAT ELEMENT TEXT BESERTA ARIBUT CLASS dan ID VERSI JS===========
 
@@ -168,13 +170,20 @@
                     {new Date().toLocaleTimeString()}
                 </div>
             )
-
             ReactDOM.render(jam, root)
+            if (jam > new Date().toLocaleTimeString() + 6000) {
+                let a = Math.random()
+                const random = (
+                    <h4>{a}</h4>
+                )
+                ReactDOM.render(random, second)
+            }
         }
 
-        setInterval(function(){
+        setInterval(function () {
             waktu()
         })
+
 
 
         // lalu lakukan rendring ke const root diatas (parent)
