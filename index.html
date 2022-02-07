@@ -133,6 +133,10 @@
         }
 
         const luasPersegi = <h3>Luas Persegi adalah {persegi(4,5)}</h3>
+
+        // embed classname (props) kedalama JSX
+        const heading = 'heading-1'
+        const className = <h5 className={heading}>Ini adalah text h5</h5>
         
 
 
@@ -144,6 +148,7 @@
         ReactDOM.render(listAngka, root)
         ReactDOM.render(nama, root)
         ReactDOM.render(luasPersegi, root)
+        ReactDOM.render(className, root)
     </script>
 </body>
 
