@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon" href="react logo.png">
     <title>React JS</title>
 </head>
 
@@ -137,6 +139,11 @@
         // embed classname (props) kedalama JSX
         const heading = 'heading-1'
         const className = <h5 className={heading}>Ini adalah text h5</h5>
+
+        // embed gambar ke dalam JSX, diujung tag harus di tutup. Bukan > tapi />
+        const link = 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+        const alt = 'gambar'
+        const gambar = <img src={link} alt={alt}/>
         
 
 
@@ -149,6 +156,7 @@
         ReactDOM.render(nama, root)
         ReactDOM.render(luasPersegi, root)
         ReactDOM.render(className, root)
+        ReactDOM.render(gambar, root)
     </script>
 </body>
 
