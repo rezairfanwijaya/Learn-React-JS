@@ -129,12 +129,12 @@
         const nama = <h2>Hallo Saya {reza}</h2>
 
         // embed function
-        function persegi (p,l){
-            let luas = p*l
+        function persegi(p, l) {
+            let luas = p * l
             return luas
         }
 
-        const luasPersegi = <h3>Luas Persegi adalah {persegi(4,5)}</h3>
+        const luasPersegi = <h3>Luas Persegi adalah {persegi(4, 5)}</h3>
 
         // embed classname (props) kedalama JSX
         const heading = 'heading-1'
@@ -143,21 +143,38 @@
         // embed gambar ke dalam JSX, diujung tag harus di tutup. Bukan > tapi />
         const link = 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
         const alt = 'gambar'
-        const gambar = <img src={link} alt={alt}/>
+        const gambar = <img src={link} alt={alt} />
 
 
 
         // ========== REACT COMPONENT ===========
         // react component adalah funtion dengan parameter props (dalam html sering dikenal atribut)  yang memiliki return JSX. Nama function ini harus berawalan huruf besar
 
-        function Hallo (props){
+        function Hallo(props) {
             return <h4>Hallo {props.nama}</h4>
         }
 
         // jsx
         // dan pada jsx function Hallo diatas ditulis sebagai tag html
-        const hallo = <Hallo nama="Reza"/>
-        
+        const hallo = <Hallo nama="Reza" />
+
+
+        // membuat jam menggunakan react component
+        // agar jam bisa realtime kita butuh interval
+        function waktu() {
+            const jam = (
+                <div>
+                    <h4>Jam sekarang</h4>
+                    {new Date().toLocaleTimeString()}
+                </div>
+            )
+
+            ReactDOM.render(jam, root)
+        }
+
+        setInterval(function(){
+            waktu()
+        })
 
 
         // lalu lakukan rendring ke const root diatas (parent)
@@ -171,6 +188,8 @@
         ReactDOM.render(className, root)
         ReactDOM.render(gambar, root)
         ReactDOM.render(hallo, root)
+        waktu()
+
     </script>
 </body>
 
