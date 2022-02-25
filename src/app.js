@@ -136,38 +136,50 @@
 
         // membuat jam menggunakan react component
         // agar jam bisa realtime kita butuh interval
-        function waktu() {
-            const jam = (
-                <div>
-                    <h4>Jam sekarang</h4>
-                    {new Date().toLocaleTimeString()}
-                </div>
-            )
-            ReactDOM.render(jam, root)
-            if (jam > new Date().toLocaleTimeString() + 6000) {
-                let a = Math.random()
-                const random = (
-                    <h4>{a}</h4>
-                )
-                ReactDOM.render(random, second)
-            }
-        }
+        // function waktu() {
+        //     const jam = (
+        //         <div>
+        //             <h4>Jam sekarang</h4>
+        //             {new Date().toLocaleTimeString()}
+        //         </div>
+        //     )
+        //     ReactDOM.render(jam, root)
+        //     if (jam > new Date().toLocaleTimeString() + 6000) {
+        //         let a = Math.random()
+        //         const random = (
+        //             <h4>{a}</h4>
+        //         )
+        //         ReactDOM.render(random, second)
+        //     }
+        // }
 
-        setInterval(function () {
-            waktu()
-        })
+        // setInterval(function () {
+        //     waktu()
+        // })
+
+        // membuat kotak
+        const kotak = (
+            <h2 style= {{ 
+                color : "#fff",
+                padding : "45px",
+                backgroundColor : "blue",
+             }}>Hallo</h2>
+        )
+
+
 
 
 
         // lalu lakukan rendring ke const root diatas (parent)
-        ReactDOM.render(textKedua, root)
-        ReactDOM.render(div, root)
-        ReactDOM.render(pragment, root)
-        ReactDOM.render(ul, root)
-        ReactDOM.render(listAngka, root)
-        ReactDOM.render(nama, root)
-        ReactDOM.render(luasPersegi, root)
-        ReactDOM.render(className, root)
-        ReactDOM.render(gambar, root)
-        ReactDOM.render(hallo, root)
-        waktu()
+        // ReactDOM.render(textKedua, root)
+        // ReactDOM.render(div, root)
+        // ReactDOM.render(pragment, root)
+        // ReactDOM.render(ul, root)
+        // ReactDOM.render(listAngka, root)
+        // ReactDOM.render(nama, root)
+        // ReactDOM.render(luasPersegi, root)
+        // ReactDOM.render(className, root)
+        // ReactDOM.render(gambar, root)
+        // ReactDOM.render(hallo, root)
+        // waktu()
+        ReactDOM.render(kotak, root)

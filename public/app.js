@@ -123,19 +123,25 @@ const hallo = /*#__PURE__*/React.createElement(Hallo, {
 // setInterval(function () {
 //     waktu()
 // })
+// membuat kotak
 
-const almt = "Indonesia Cilacap";
-const alamat = /*#__PURE__*/React.createElement("p", null, "saya tinggal di ", almt); // lalu lakukan rendring ke const root diatas (parent)
+const kotak = /*#__PURE__*/React.createElement("h2", {
+  style: {
+    color: "#fff",
+    padding: "45px",
+    backgroundColor: "blue"
+  }
+}, "Hallo"); // lalu lakukan rendring ke const root diatas (parent)
+// ReactDOM.render(textKedua, root)
+// ReactDOM.render(div, root)
+// ReactDOM.render(pragment, root)
+// ReactDOM.render(ul, root)
+// ReactDOM.render(listAngka, root)
+// ReactDOM.render(nama, root)
+// ReactDOM.render(luasPersegi, root)
+// ReactDOM.render(className, root)
+// ReactDOM.render(gambar, root)
+// ReactDOM.render(hallo, root)
+// waktu()
 
-ReactDOM.render(textKedua, root);
-ReactDOM.render(div, root);
-ReactDOM.render(pragment, root);
-ReactDOM.render(ul, root);
-ReactDOM.render(listAngka, root);
-ReactDOM.render(nama, root);
-ReactDOM.render(luasPersegi, root);
-ReactDOM.render(className, root);
-ReactDOM.render(gambar, root);
-ReactDOM.render(hallo, root); // node
-
-ReactDOM.render(alamat, root);
+ReactDOM.render(kotak, root);
