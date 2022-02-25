@@ -124,14 +124,31 @@ const hallo = /*#__PURE__*/React.createElement(Hallo, {
 //     waktu()
 // })
 // membuat kotak
+// const kotak  = (
+//     <h2 style= {{ 
+//         color : "#444",
+//         padding : "45px",
+//         backgroundColor : "#fff",
+//      }}>Hallo Mari Belajar Reacjs</h2>
+// )
+// even handler
+// function biasa tanpa argument
 
-const kotak = /*#__PURE__*/React.createElement("h2", {
-  style: {
-    color: "#444",
-    padding: "45px",
-    backgroundColor: "#fff"
-  }
-}, "Hallo Mari Belajar Reacjs"); // lalu lakukan rendring ke const root diatas (parent)
+function klik() {
+  alert("hallo");
+}
+
+const tombol = /*#__PURE__*/React.createElement("button", {
+  onClick: klik
+}, "Click Saya"); // function dengan argument
+
+function arg(params) {
+  alert(params);
+}
+
+const argTombol = /*#__PURE__*/React.createElement("button", {
+  onClick: arg.bind(this, 'hallo saya function dengan argument')
+}, "CLick Me"); // lalu lakukan rendring ke const root diatas (parent)
 // ReactDOM.render(textKedua, root)
 // ReactDOM.render(div, root)
 // ReactDOM.render(pragment, root)
@@ -143,5 +160,7 @@ const kotak = /*#__PURE__*/React.createElement("h2", {
 // ReactDOM.render(gambar, root)
 // ReactDOM.render(hallo, root)
 // waktu()
+// ReactDOM.render(kotak, root)
+// ReactDOM.render(tombol,root)
 
-ReactDOM.render(kotak, root);
+ReactDOM.render(argTombol, root);

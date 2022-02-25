@@ -158,13 +158,26 @@
         // })
 
         // membuat kotak
-        const kotak  = (
-            <h2 style= {{ 
-                color : "#444",
-                padding : "45px",
-                backgroundColor : "#fff",
-             }}>Hallo Mari Belajar Reacjs</h2>
-        )
+        // const kotak  = (
+        //     <h2 style= {{ 
+        //         color : "#444",
+        //         padding : "45px",
+        //         backgroundColor : "#fff",
+        //      }}>Hallo Mari Belajar Reacjs</h2>
+        // )
+
+        // even handler
+        // function biasa tanpa argument
+        function klik(){
+            alert("hallo")
+        }
+        const tombol = <button onClick ={klik} >Click Saya</button>
+
+        // function dengan argument
+        function arg(params) {
+            alert(params)
+        }
+        const argTombol = <button onClick={arg.bind(this, 'hallo saya function dengan argument')}>CLick Me</button>
 
 
 
@@ -182,4 +195,6 @@
         // ReactDOM.render(gambar, root)
         // ReactDOM.render(hallo, root)
         // waktu()
-        ReactDOM.render(kotak, root)
+        // ReactDOM.render(kotak, root)
+        // ReactDOM.render(tombol,root)
+        ReactDOM.render(argTombol, root)
