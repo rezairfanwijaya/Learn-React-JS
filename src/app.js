@@ -158,12 +158,12 @@
         // })
 
         // membuat kotak
-        const kotak = (
+        const kotak  = (
             <h2 style= {{ 
-                color : "#fff",
+                color : "#444",
                 padding : "45px",
-                backgroundColor : "blue",
-             }}>Hallo</h2>
+                backgroundColor : "#fff",
+             }}>Hallo Mari Belajar Reacjs</h2>
         )
 
 

@@ -127,11 +127,11 @@ const hallo = /*#__PURE__*/React.createElement(Hallo, {
 
 const kotak = /*#__PURE__*/React.createElement("h2", {
   style: {
-    color: "#fff",
+    color: "#444",
     padding: "45px",
-    backgroundColor: "blue"
+    backgroundColor: "#fff"
   }
-}, "Hallo"); // lalu lakukan rendring ke const root diatas (parent)
+}, "Hallo Mari Belajar Reacjs"); // lalu lakukan rendring ke const root diatas (parent)
 // ReactDOM.render(textKedua, root)
 // ReactDOM.render(div, root)
 // ReactDOM.render(pragment, root)
