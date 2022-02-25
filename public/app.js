@@ -124,7 +124,7 @@ const hallo = /*#__PURE__*/React.createElement(Hallo, {
 //     waktu()
 // })
 
-const almt = "sudimampir";
+const almt = "Indonesia Cilacap";
 const alamat = /*#__PURE__*/React.createElement("p", null, "saya tinggal di ", almt); // lalu lakukan rendring ke const root diatas (parent)
 
 ReactDOM.render(textKedua, root);
