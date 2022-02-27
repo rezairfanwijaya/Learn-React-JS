@@ -148,7 +148,32 @@ function arg(params) {
 
 const argTombol = /*#__PURE__*/React.createElement("button", {
   onClick: arg.bind(this, 'hallo saya function dengan argument')
-}, "CLick Me"); // lalu lakukan rendring ke const root diatas (parent)
+}, "CLick Me"); // React component -> function di js yg diawali dengan huruf besar dan memilki nilai return berupa jsx
+
+function Conunter() {
+  // tetapkan nilai awal
+  // const state = React.useState(0)
+  // console.log(state)
+  // tetapkan varible untuk menampung nilai 
+  // const hasil = state[0]
+  // varible untuk menerima value dari button dan melakukan update ke variable state
+  // const updateHasil = state[1]
+  // penulisan diatas bisa disingkat seperti ini 
+  const [state, setState] = React.useState(0);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("button", {
+    onClick: function () {
+      setState(state - 1);
+    }
+  }, "-"), /*#__PURE__*/React.createElement("span", {
+    style: {
+      "margin": 10
+    }
+  }, state), /*#__PURE__*/React.createElement("button", {
+    onClick: function () {
+      setState(state + 1);
+    }
+  }, "+"));
+} // lalu lakukan rendring ke const root diatas (parent)
 // ReactDOM.render(textKedua, root)
 // ReactDOM.render(div, root)
 // ReactDOM.render(pragment, root)
@@ -163,4 +188,7 @@ const argTombol = /*#__PURE__*/React.createElement("button", {
 // ReactDOM.render(kotak, root)
 // ReactDOM.render(tombol,root)
 
-ReactDOM.render(argTombol, root);
+
+ReactDOM.render(argTombol, root); // render react component
+
+ReactDOM.render( /*#__PURE__*/React.createElement(Conunter, null), root);
