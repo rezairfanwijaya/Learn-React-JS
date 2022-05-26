@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Team from './components/team/Team';
+import Blog from './pages/blog/Blog';
+import BlogDetail from './pages/blogDetail/blogDetail';
 
 function App() {
   return (
@@ -13,11 +15,15 @@ function App() {
       <BrowserRouter>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />}>
+          <Route path="about" element={<About />}>
               <Route path="team" element={<Team />} />
           </Route>
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/:judul" element={<BlogDetail />} />
+          <Route path="*" element={<h1>404 URL SALAH !!!!</h1>} />
         </Routes>
       </BrowserRouter>
     </>
