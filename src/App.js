@@ -9,8 +9,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <Welcome/>
-      <WelcomeH2 text="Ini Welcome h2 pertama"/>
-      <WelcomeH2 text = "Ini Welcome h2 kedua"/>
+      <WelcomeH2 children="Ini Welcome h2 pertama"/>
+      <WelcomeH2 children="Ini Welcome h2 kedua"/>
+      <WelcomeH2>Tombol dari welcome h2</WelcomeH2>
     </div>
   );
 }
