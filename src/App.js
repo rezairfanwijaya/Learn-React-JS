@@ -8,6 +8,7 @@ import About from './pages/about/About';
 import Team from './components/team/Team';
 import Blog from './pages/blog/Blog';
 import BlogDetail from './pages/blogDetail/blogDetail';
+import Navigasi from './pages/navigasi/Navigasi';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           </Route>
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:judul" element={<BlogDetail />} />
+          <Route path="navigasi" element={<Navigasi />} />
           <Route path="*" element={<h1>404 URL SALAH !!!!</h1>} />
         </Routes>
       </BrowserRouter>
