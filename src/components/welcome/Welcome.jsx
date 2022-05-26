@@ -4,8 +4,8 @@ export default function WellcomeH1() {
     )
 }
 
-export function WelcomeH2() {
+export function WelcomeH2(props) {
     return (
-        <h2>Welcome From H2</h2>
+        <h2>{props.text}</h2>
     )
 }

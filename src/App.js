@@ -9,7 +9,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <Welcome/>
-      <WelcomeH2/>
+      <WelcomeH2 text="Ini Welcome h2 pertama"/>
+      <WelcomeH2 text = "Ini Welcome h2 kedua"/>
     </div>
   );
 }
