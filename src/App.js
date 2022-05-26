@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import Welcome, {WelcomeH2} from './components/welcome/Welcome';
 import './App.css';
+import Button from './components/button/Button';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <WelcomeH2 children="Ini Welcome h2 pertama"/>
       <WelcomeH2 children="Ini Welcome h2 kedua"/>
       <WelcomeH2>Tombol dari welcome h2</WelcomeH2>
+      <Button>Start Learn</Button>
     </div>
   );
 }
